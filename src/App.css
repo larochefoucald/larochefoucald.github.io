@@ -1,0 +1,80 @@
+.App-logo { display: inline; height: 4vmin; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html, body { 
+  background-color: #f1f4ffff; 
+}
+
+pre, h1 { 
+}
+
+.Main .card-title { 
+  font-size:  calc(19px + 2vmin); 
+}
+
+.Profile-image { 
+  max-height: 22vh; 
+  display: inline;
+  float: right;
+}
+
+.Project-image {
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+.Main {
+  margin-bottom: 5vh;
+  /*box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.2), 0.1em 1.5em 1em 0 rgba(0, 0, 0, 0.19);*/
+  box-shadow: 0.5em .75em 2em 0 rgba(0, 0, 0, 0.2);
+}
+
+.Main:hover {
+  box-shadow: 0.5em .75em 2em 0 rgba(0, 0, 0, 0.3);
+}
+
+.Menu {
+  background-color: #fff;
+  margin-bottom: 5vh;
+  box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.2), 0 1.5em 1em 0 rgba(0, 0, 0, 0.19);
+}
+
+.Menu > .card, 
+.list-group, 
+.list-group-item {
+  background-color: #fff;
+}
+
+.Menu-full-name {
+  font-size:  calc(15px + 2vmin);
+  margin-bottom: 0px;
+  color: #4ecca3;
+}
+
+.Menu-full-name:hover { 
+  color:  #cc4e77; 
+  text-decoration: none;
+}
+
+.Menu-item { 
+  color: black; 
+} /* #ffc000 */
+.Menu-item:hover { 
+  color:  #cc4e77; 
+  text-decoration: none;
+}
+

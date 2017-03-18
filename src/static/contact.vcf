@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//iPhone OS 15.5//EN
+N:Chapnick;Chad;;;
+FN:Chad Chapnick
+ORG:Example Company;
+EMAIL;type=INTERNET;type=HOME;type=pref:chad.chapnick@example.com
+TEL;type=CELL;type=VOICE;type=pref:(312) 555-1234
+item1.URL;type=pref:example.com
+item1.X-ABLabel:_$!<HomePage>!$_
+END:VCARD
