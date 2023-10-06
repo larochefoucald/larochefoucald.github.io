@@ -93,7 +93,7 @@ var projectMeta = [
 
 
 export const projects = [
-  <WritingSampleProject />,
+  <WritingSampleProject key={'writing-sample'}/>,
   projectMeta.map(({ title, fname, image }, index) => (
     <Project
       key={index}

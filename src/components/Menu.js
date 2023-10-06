@@ -5,12 +5,6 @@ import { Link } from 'react-router-dom';
 import logo from '../logo.svg';
 import resume from "../static/chad_chapnick_resume.pdf"
 
-  /*
-          <Link to="/snippets" className="Menu-item">Snippets</Link> 
-          <Card.Text className="text-muted"> 
-          That resonate with me
-          </Card.Text>
-          */
 
 export default class Menu extends React.Component {
 
@@ -29,6 +23,9 @@ export default class Menu extends React.Component {
 
           <Link to="/papers" className="Menu-item">Papers</Link> 
           <Card.Text className="text-muted">Notable publications & collaborations</Card.Text>
+
+          <Link to="/blog" className="Menu-item">Blog</Link> 
+          <Card.Text className="text-muted">Food for thought</Card.Text>
 
         </ListGroup.Item>
 
