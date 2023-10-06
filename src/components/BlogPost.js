@@ -10,17 +10,17 @@ const BlogPost = ({ match, location }) => {
   const blog = blogMeta.find((blog) => blog.id === id); // Find the blog based on the ID
 
   const [text, setText] = useState(null);
-	
-	console.log(blog.markdown)
 
   useEffect(() => {
-    fetch(blog.markdown)
-      .then((response) =>  response.text() )
-      .then((text) =>  setText(text))
-      .catch((error) => {
-        console.error('Error fetching file:', error);
-      });
-  }, [blog.markdown]);
+		if (blog && blog.markdown){
+			fetch(blog.markdown)
+				.then((response) =>  response.text() )
+				.then((text) =>  setText(text))
+				.catch((error) => {
+					console.error('Error fetching file:', error);
+				});
+		}
+  }, [blog]);
 
 
   return (
