@@ -4,18 +4,19 @@ import remarkGfm from 'remark-gfm';
 import { MDXProvider } from '@mdx-js/react';
 
 // thank you https://www.codeconcisely.com/posts/nextjs-relative-image-paths-in-markdown/
+
+function nodeToImage({ node, ...props }) {
+  const fileName = node.properties.src.replace('./', '');
+  props.src = require(`../blog/${fileName}`);
+  return <img {...props} />;
+}
+
 const BlogMarkdown = ({ markdownContent }) => {
   return (
     <div>	
     <MDXProvider>
 		  <Markdown
-				components={{
-					img: function ({ node, ...props }) {
-							const fileName = node.properties.src.replace('./', '');
-              props.src = require(`../blog/${fileName}`);
-							return <img {...props} />;
-						},
-					}}
+				components={{ img: nodeToImage}}
           remarkPlugins={[remarkGfm]}
         >
 				{markdownContent}
