@@ -1,4 +1,11 @@
-.App-logo { display: inline; height: 4vmin; }
+.App-logo { display: flex; height: 2.8vmin; }
+
+@media (max-width: 768px) {
+.App-logo {
+  margin-top: 0.44ex;
+  height: 5vmin;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
