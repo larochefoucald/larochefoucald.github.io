@@ -20,7 +20,6 @@ const BlogMarkdown = ({ markdownContent }) => {
         >
 				{markdownContent}
 		  </Markdown>
-
     </MDXProvider>
     </div>
   );

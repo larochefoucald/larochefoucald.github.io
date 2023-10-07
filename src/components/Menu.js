@@ -5,16 +5,19 @@ import { Link } from 'react-router-dom';
 import logo from '../logo.svg';
 import resume from "../static/chad_chapnick_resume.pdf"
 
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+
+
 
 export default class Menu extends React.Component {
 
   render() {
     return (
     <Card className="Menu">
-      <Card.Body> 
+      <Card.Header> 
         <Link to="/" className="Menu-full-name">Chad Chapnick</Link>
-      </Card.Body>
-
+      </Card.Header>
       <ListGroup variant="flush" className="Menu-list">
 
         <ListGroup.Item>
@@ -28,7 +31,6 @@ export default class Menu extends React.Component {
           <Card.Text className="text-muted">Food for thought</Card.Text>
 
         </ListGroup.Item>
-
         
         <ListGroup.Item>
           <Card.Link 
@@ -38,26 +40,22 @@ export default class Menu extends React.Component {
           Résumé
         </Card.Link>
       </ListGroup.Item>
-
     </ListGroup>
 
-    <Card.Body>
-      <Card.Link 
-      className="Menu-item"
-      href="https://github.com/chapnickc" 
-      target="_blank">
-        Github
-      </Card.Link>
-      <Card.Link 
-      className="Menu-item"
-      href="https://www.linkedin.com/in/chapnickc" 
-      target="_blank">
-        LinkedIn
-      </Card.Link>
-    </Card.Body>
-
     <Card.Footer className="text-muted">
-      Made with React <img src={logo} className="App-logo" alt="logo"/> 
+      <Card.Link 
+        className="Menu-item"
+        href="https://www.linkedin.com/in/chapnickc" 
+        target="_blank">
+        <FaLinkedin />
+      </Card.Link>
+      <Card.Link 
+        className="Menu-item"
+        href="https://github.com/chapnickc" 
+        target="_blank">
+        <FaGithub />
+      </Card.Link>
+      <img src={logo} className="float-right App-logo" alt="logo"/> 
     </Card.Footer>
 
   </Card>);

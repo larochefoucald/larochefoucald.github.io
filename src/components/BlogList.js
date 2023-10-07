@@ -1,28 +1,40 @@
 // BlogList.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-import simple from '../blog/post0/simple.mdx'
+import first from '../blog/post0/first.md'
 
 export const blogMeta = [
-	{ id: 'simple', markdown: simple, title: 'Blog Post 1' },
-	{ id: 2, title: 'Blog Post 2' },
+  { 
+    id: 'first',
+    title: 'FIRST',
+    markdown: first, 
+    subtitle: "if you ain't first you're last"
+  },
 ];
 
 const BlogList = () => {
   return (
-    <div>
-      <h2>Blog List</h2>
-      <ul>
-        {blogMeta.map((blog) => (
-          <li key={blog.id}>
-            <Link 
-              to={`/blog/${blog.id}`}
-          >{blog.title}</Link>
-          </li>
+        <ListGroup as="ol" numbered>
+          <h2> Blog List </h2>
+          {
+          blogMeta.map((blog) => (
+          <ListGroup.Item 
+            as="li"
+            className="d-flex justify-content-between align-items-start p-3"
+            key={blog.id}>
+            <div className="ms-2 me-auto">
+              <div className="fw-bold pb-2">
+                <Link to={`/blog/${blog.id}`} className="fw-bold text-success">
+                  {blog.title}
+                </Link>
+              </div> 
+              {blog.subtitle}
+            </div>
+          </ListGroup.Item>
         ))}
-      </ul>
-    </div>
+  </ListGroup>
   );
 };
 
