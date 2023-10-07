@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 import { blogMeta } from './BlogList'; // Import the blogs array
+import BlogMarkdown  from './BlogMarkdown';
 
 const BlogPost = ({ match, location }) => {
   const { id } = match.params;
@@ -23,11 +24,14 @@ const BlogPost = ({ match, location }) => {
   }, [blog]);
 
 
+      //<BlogMarkdown markdownContent={text} />
   return (
     <div>
       <Link to="/">Return to Home Page</Link>
       <h1>THIS IS MY BLOG</h1>
-      <ReactMarkdown children={text} remarkPlugins={[remarkGfm]} />
+
+      <BlogMarkdown markdownContent={text} />
+
     </div>
   );
 };

@@ -2,18 +2,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import simple from '../blog/simple.md'
+import simple from '../blog/post0/simple.mdx'
 
 export const blogMeta = [
 	{ id: 'simple', markdown: simple, title: 'Blog Post 1' },
 	{ id: 2, title: 'Blog Post 2' },
-	// Add more blog posts
 ];
 
-
-
 const BlogList = () => {
-  // Fetch the list of blogs (you can store them as an array or fetch from an API)
   return (
     <div>
       <h2>Blog List</h2>
