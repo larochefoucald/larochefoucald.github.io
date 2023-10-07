@@ -29,18 +29,17 @@ const BlogPost = ({ match, location }) => {
   return (
     <div>
     	<Nav
-      	activeKey="/home"
     	>
 				<Nav.Item>
-					<Nav.Link href="/blog" className="text-success">Return to Home Page</Nav.Link>
+					<Nav.Link href="#/blog" className="text-success">Return to Home Page</Nav.Link>
 				</Nav.Item>
 			</Nav>
 			<hr />
       <Container className={
         classNames(
-          'ml-5',
-          'mr-0',
           'mt-5',
+          'd-sm-flex',
+          'justify-content-center'
         )
       }>
       <BlogMarkdown markdownContent={text} />

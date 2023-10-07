@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactGA from 'react-ga';
 import { 
-  BrowserRouter as Router, 
+  HashRouter as Router, 
 } from "react-router-dom";
 
 import { config } from './config';

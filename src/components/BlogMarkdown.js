@@ -8,6 +8,7 @@ import { MDXProvider } from '@mdx-js/react';
 function nodeToImage({ node, ...props }) {
   const fileName = node.properties.src.replace('./', '');
   props.src = require(`../blog/${fileName}`);
+  props.className = "blog-post-image"
   return <img {...props} />;
 }
 

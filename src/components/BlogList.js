@@ -17,7 +17,7 @@ export const blogMeta = [
 const BlogList = () => {
   return (
         <ListGroup as="ol" numbered>
-          <h2> Blog List </h2>
+          <h2 className="p-3"> Blog List </h2>
           {
           blogMeta.map((blog) => (
           <ListGroup.Item 

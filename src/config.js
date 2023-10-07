@@ -1,4 +1,4 @@
 export const config = {
-	title: "chapnickc.github.io",
+	title: "vichyccoise",
 	ga: "UA-92051034-1"
 };
